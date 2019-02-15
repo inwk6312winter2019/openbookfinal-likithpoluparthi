@@ -9,6 +9,7 @@ def unique_words(f1):
       if word not in output:
         output.append(word)
   print(output)
+#unique_words(f1)
 def count_the_article(f1):
   count=0
   output=[]
@@ -18,5 +19,16 @@ def count_the_article(f1):
     for word in line:
       count+=1
   print(count)
-count_the_article(f1)
-  
+#count_the_article(f1)
+def sorted_words(f1):
+  output=[]
+  list2=[]
+  for line in f1:
+    line=line.strip()
+    line=line.split()
+    for word in line:
+      if word not in output:
+        output.append(word)
+  print(sorted(output[::-1], key = len))
+sorted_words(f1)
+    
