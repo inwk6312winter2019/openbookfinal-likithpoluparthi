@@ -53,4 +53,20 @@ def character_word_count(f1):
              dict1[word]+=1
   print(dict1)
 
-character_word_count(f1)
+#character_word_count(f1)
+
+
+"""		task1.5		"""
+
+def starts_with_vow(f1):
+  count=0
+  vow=("a","e","i","o","u")
+  for line in f1:
+    line=line.strip()
+    line=line.lower()
+    line=line.split()
+    for word in line:
+      if word[0] in vow:
+        count+=1
+  print count
+starts_with_vow(f1)
